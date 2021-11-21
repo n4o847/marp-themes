@@ -1,0 +1,16 @@
+{
+  "name": "marp-themes",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "build": "sass src:dist",
+    "watch": "sass --watch src:dist"
+  },
+  "dependencies": {
+    "github-markdown-css": "^5.0.0",
+    "highlight.js": "^10.7.3"
+  },
+  "devDependencies": {
+    "sass": "^1.43.4"
+  }
+}
