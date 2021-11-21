@@ -1,0 +1,93 @@
+@use 'sass:color';
+
+/*!
+ * Marp / Marpit sheep theme.
+ *
+ * @theme sheep
+ * @author n4o847
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */
+
+$color-light: #fff8e1;
+$color-dark: #455a64;
+$color-primary: #0288d1;
+$color-secondary: #81d4fa;
+
+@import '../node_modules/github-markdown-css/github-markdown-light';
+@import '../node_modules/highlight.js/styles/github-gist';
+
+@mixin color-scheme($bg, $text, $highlight) {
+  --color-background: #{$bg};
+  --color-background-stripe: #{rgba($text, 0.1)};
+  --color-foreground: #{$text};
+  --color-dimmed: #{color.mix($text, $bg, 80%)};
+  --color-highlight: #{$highlight};
+}
+
+section {
+  @include color-scheme($color-light, $color-dark, $color-primary);
+
+  @extend .markdown-body;
+
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    'Noto Sans CJK JP', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 32px;
+  height: 720px;
+  padding: 70px;
+  width: 1280px;
+
+  h1,
+  h2 {
+    border-bottom: none;
+  }
+
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    font-size: calc(250% / 3);
+  }
+
+  li > ul,
+  li > ol {
+    margin-top: 0.25em;
+  }
+
+  li > pre {
+    margin-top: 16px;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+      Liberation Mono, 'Noto Sans CJK JP', monospace;
+    vertical-align: 0.075em;
+  }
+
+  pre {
+    border: 1px solid #999;
+  }
+
+  &.lead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
