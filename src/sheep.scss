@@ -35,7 +35,8 @@ section {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-    'Noto Sans CJK JP', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    'Noto Sans CJK JP', 'Noto Sans JP', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
   font-size: 32px;
   height: 720px;
   padding: 70px;
@@ -64,7 +65,7 @@ section {
 
   code {
     font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-      Liberation Mono, 'Noto Sans CJK JP', monospace;
+      Liberation Mono, 'Noto Sans CJK JP', 'Noto Sans JP', monospace;
     vertical-align: 0.075em;
   }
 
